@@ -23,7 +23,7 @@ This project analyzes the **UAE rental market** using a dataset of **73,742 prop
 ## 📈 Key Visualizations  
 | Analysis | Visualization |
 |----------|--------------|
-| Rental Prices by City | ![Bar Chart](outputs/plots/rent_by_city.png) |
+| Rental Prices by City | ![Bar Chart](outputs/Comparing rental prices across different cities.png) |
 | Property Types Distribution | ![Pie Chart](outputs/plots/property_types.png) |
 | Geospatial Rent Mapping | ![Map](outputs/plots/rent_map.png) |
 
