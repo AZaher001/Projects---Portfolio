@@ -13,7 +13,7 @@ This project analyzes the **UAE rental market** using a dataset of **73,742 prop
 ✔ **Highest Rental Prices**: Found in **Palm Jumeirah, Downtown Dubai**  
 ✔ **Furnishing Trends**: Nearly equal split between furnished/unfurnished  
 
-📊 **Interactive Dashboard**: [View Plotly Visualizations](file:///C:/Amr%20Zaher/Final%20Project/Python/Python%20UAE%20Rental%20Market%20Data/Dubai_Real_Estate_Analysis.html)  
+📊 **Interactive Dashboard**: [View Plotly Visualizations](http://localhost:8888/notebooks/Documents/Jupyter/Dubai_Real_Estate_Analysis.ipynb?)  
 
 ## 🛠️ Tools & Libraries  
 - **Python (Pandas, NumPy)** – Data cleaning & analysis  
