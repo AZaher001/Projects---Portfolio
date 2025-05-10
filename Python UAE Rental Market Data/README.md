@@ -23,12 +23,7 @@ This project analyzes the **UAE rental market** using a dataset of **73,742 prop
 ## 📈 Key Visualizations  
 | Analysis | Visualization |
 |----------|--------------|
-| Rental Prices by City | ![Bar Chart](outputs/Comparing rental prices across different cities.png) |
-| Property Types Distribution | ![Pie Chart](outputs/plots/property_types.png) |
-| Geospatial Rent Mapping | ![Map](outputs/plots/rent_map.png) |
+| Rental Prices by City | ![Chart](plots/rent_by_city.png) |
+| Property Types Distribution | ![Chart](plots/Rent_Category_Distribution_by_Property_Type.png) |
+| Geospatial Rent Mapping | ![Map](plots/Rental_Properties_Locations.png) |
 
-## 🚀 How to Run  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/yourusername/Dubai-Real-Estate-Analysis.git
-   cd Dubai-Real-Estate-Analysis
