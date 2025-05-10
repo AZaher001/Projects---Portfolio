@@ -1,6 +1,0 @@
-echo "pandas
-numpy
-seaborn
-matplotlib
-plotly
-jupyter" > requirements.txt
