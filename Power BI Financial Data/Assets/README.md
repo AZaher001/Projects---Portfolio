@@ -1,1 +1,1 @@
-
+#For PNGs (visuals/icons)
