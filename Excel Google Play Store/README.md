@@ -5,6 +5,8 @@
 ## Overview
 Analysis of Google Play Store apps including install trends, ratings, categories, and correlations between metrics.
 
+![Dashboard Preview](Assets/dashboard_preview.png)
+
 ## Contents
 - `Dashboard.xlsx`: Interactive Excel dashboard
 - `googleplaystore.csv`: Raw dataset
