@@ -1,6 +1,6 @@
 # Google Play Store Data Analysis Project
 
-![Project Banner](assets/googleplay.png)
+![Project Banner](Assets/googleplayicon.png)
 
 ## Overview
 Analysis of Google Play Store apps including install trends, ratings, categories, and correlations between metrics.
