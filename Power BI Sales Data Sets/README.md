@@ -1,6 +1,6 @@
 # Power BI Sales Dashboard
 
-![Dashboard Preview](Assets/report1.png) <!-- Add a screenshot -->
+![Dashboard Preview](Assets/Report1.png) <!-- Add a screenshot -->
 
 ## Overview
 This Power BI dashboard provides interactive sales analytics for [Company/Organization Name], offering insights into sales performance, customer behavior, and product trends across multiple years (2019-2021). The dashboard helps stakeholders identify opportunities, track KPIs, and make data-driven decisions.
