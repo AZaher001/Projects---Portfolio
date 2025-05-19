@@ -1,6 +1,6 @@
 # Superstore Sales Dashboard - Power BI Project
 
-![Dashboard Preview](Assets/Report.png) <!-- Add a screenshot -->
+![Dashboard Preview](Assets/Report.png)
 
 
 ## Project Overview
