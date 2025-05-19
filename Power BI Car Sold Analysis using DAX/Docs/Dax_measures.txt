@@ -1,0 +1,263 @@
+-----------------------------------------------------------------------------
+-- Calculated Table: 'DateTableTemplate_417a4c9a-e229-45ce-ae6d-61bd0c87ef90'
+-----------------------------------------------------------------------------
+TABLE 'DateTableTemplate_417a4c9a-e229-45ce-ae6d-61bd0c87ef90' = Calendar(Date(2015,1,1), Date(2015,1,1))
+    , Visible = FALSE
+
+-------------------------------
+-- Calculated Table: 'Calender'
+-------------------------------
+TABLE Calender = CALENDAR(MIN(car_data[Date]),MAX(car_data[Date]))
+
+--------------------------------------------------------------------------
+-- Calculated Table: 'LocalDateTable_d3452ada-18c1-4e0d-9d02-01e36b5d261e'
+--------------------------------------------------------------------------
+TABLE 'LocalDateTable_d3452ada-18c1-4e0d-9d02-01e36b5d261e' = Calendar(Date(Year(MIN('Calender'[Date])), 1, 1), Date(Year(MAX('Calender'[Date])), 12, 31))
+    , Visible = FALSE
+
+------------------------------------------------------------------------------------
+-- Calculated Column: 'DateTableTemplate_417a4c9a-e229-45ce-ae6d-61bd0c87ef90'[Year]
+------------------------------------------------------------------------------------
+COLUMN 'DateTableTemplate_417a4c9a-e229-45ce-ae6d-61bd0c87ef90'[Year] = YEAR([Date])
+    , FormatString = "0"
+    , DataType = INTEGER
+    , Visible = FALSE
+
+---------------------------------------------------------------------------------------
+-- Calculated Column: 'DateTableTemplate_417a4c9a-e229-45ce-ae6d-61bd0c87ef90'[MonthNo]
+---------------------------------------------------------------------------------------
+COLUMN 'DateTableTemplate_417a4c9a-e229-45ce-ae6d-61bd0c87ef90'[MonthNo] = MONTH([Date])
+    , FormatString = "0"
+    , DataType = INTEGER
+    , Visible = FALSE
+
+-------------------------------------------------------------------------------------
+-- Calculated Column: 'DateTableTemplate_417a4c9a-e229-45ce-ae6d-61bd0c87ef90'[Month]
+-------------------------------------------------------------------------------------
+COLUMN 'DateTableTemplate_417a4c9a-e229-45ce-ae6d-61bd0c87ef90'[Month] = FORMAT([Date], "MMMM")
+    , DataType = STRING
+    , Visible = FALSE
+
+-----------------------------------------------------------------------------------------
+-- Calculated Column: 'DateTableTemplate_417a4c9a-e229-45ce-ae6d-61bd0c87ef90'[QuarterNo]
+-----------------------------------------------------------------------------------------
+COLUMN 'DateTableTemplate_417a4c9a-e229-45ce-ae6d-61bd0c87ef90'[QuarterNo] = INT(([MonthNo] + 2) / 3)
+    , FormatString = "0"
+    , DataType = INTEGER
+    , Visible = FALSE
+
+---------------------------------------------------------------------------------------
+-- Calculated Column: 'DateTableTemplate_417a4c9a-e229-45ce-ae6d-61bd0c87ef90'[Quarter]
+---------------------------------------------------------------------------------------
+COLUMN 'DateTableTemplate_417a4c9a-e229-45ce-ae6d-61bd0c87ef90'[Quarter] = "Qtr " & [QuarterNo]
+    , DataType = STRING
+    , Visible = FALSE
+
+-----------------------------------------------------------------------------------
+-- Calculated Column: 'DateTableTemplate_417a4c9a-e229-45ce-ae6d-61bd0c87ef90'[Day]
+-----------------------------------------------------------------------------------
+COLUMN 'DateTableTemplate_417a4c9a-e229-45ce-ae6d-61bd0c87ef90'[Day] = DAY([Date])
+    , FormatString = "0"
+    , DataType = INTEGER
+    , Visible = FALSE
+
+--------------------------------------
+-- Calculated Column: 'Calender'[Year]
+--------------------------------------
+COLUMN Calender[Year] = Year(Calender[Date])
+    , FormatString = "0"
+    , DataType = INTEGER
+
+---------------------------------------
+-- Calculated Column: 'Calender'[Month]
+---------------------------------------
+COLUMN Calender[Month] = FORMAT(Calender[Date],"MMMM")
+    , DataType = STRING
+
+--------------------------------------
+-- Calculated Column: 'Calender'[Week]
+--------------------------------------
+COLUMN Calender[Week] = WEEKNUM(Calender[Date])
+    , FormatString = "0"
+    , DataType = INTEGER
+
+---------------------------------------------------------------------------------
+-- Calculated Column: 'LocalDateTable_d3452ada-18c1-4e0d-9d02-01e36b5d261e'[Year]
+---------------------------------------------------------------------------------
+COLUMN 'LocalDateTable_d3452ada-18c1-4e0d-9d02-01e36b5d261e'[Year] = YEAR([Date])
+    , FormatString = "0"
+    , DataType = INTEGER
+    , Visible = FALSE
+
+------------------------------------------------------------------------------------
+-- Calculated Column: 'LocalDateTable_d3452ada-18c1-4e0d-9d02-01e36b5d261e'[MonthNo]
+------------------------------------------------------------------------------------
+COLUMN 'LocalDateTable_d3452ada-18c1-4e0d-9d02-01e36b5d261e'[MonthNo] = MONTH([Date])
+    , FormatString = "0"
+    , DataType = INTEGER
+    , Visible = FALSE
+
+----------------------------------------------------------------------------------
+-- Calculated Column: 'LocalDateTable_d3452ada-18c1-4e0d-9d02-01e36b5d261e'[Month]
+----------------------------------------------------------------------------------
+COLUMN 'LocalDateTable_d3452ada-18c1-4e0d-9d02-01e36b5d261e'[Month] = FORMAT([Date], "MMMM")
+    , DataType = STRING
+    , Visible = FALSE
+
+--------------------------------------------------------------------------------------
+-- Calculated Column: 'LocalDateTable_d3452ada-18c1-4e0d-9d02-01e36b5d261e'[QuarterNo]
+--------------------------------------------------------------------------------------
+COLUMN 'LocalDateTable_d3452ada-18c1-4e0d-9d02-01e36b5d261e'[QuarterNo] = INT(([MonthNo] + 2) / 3)
+    , FormatString = "0"
+    , DataType = INTEGER
+    , Visible = FALSE
+
+------------------------------------------------------------------------------------
+-- Calculated Column: 'LocalDateTable_d3452ada-18c1-4e0d-9d02-01e36b5d261e'[Quarter]
+------------------------------------------------------------------------------------
+COLUMN 'LocalDateTable_d3452ada-18c1-4e0d-9d02-01e36b5d261e'[Quarter] = "Qtr " & [QuarterNo]
+    , DataType = STRING
+    , Visible = FALSE
+
+--------------------------------------------------------------------------------
+-- Calculated Column: 'LocalDateTable_d3452ada-18c1-4e0d-9d02-01e36b5d261e'[Day]
+--------------------------------------------------------------------------------
+COLUMN 'LocalDateTable_d3452ada-18c1-4e0d-9d02-01e36b5d261e'[Day] = DAY([Date])
+    , FormatString = "0"
+    , DataType = INTEGER
+    , Visible = FALSE
+
+-----------------------------
+-- Measure: [YTD Total Sales]
+-----------------------------
+MEASURE car_data[YTD Total Sales] = TOTALYTD(SUM(car_data[Price ($)]),Calender[Date])
+    , FormatString = "\$#,0.###############;(\$#,0.###############);\$#,0.###############"
+
+-----------------------------
+-- Measure: [MTD Total Sales]
+-----------------------------
+MEASURE car_data[MTD Total Sales] = TOTALMTD(SUM(car_data[Price ($)]),Calender[Date])
+    , FormatString = "\$#,0.0;(\$#,0.0);\$#,0.0"
+
+------------------------------
+-- Measure: [PYTD Total Sales]
+------------------------------
+MEASURE car_data[PYTD Total Sales] = CALCULATE(SUM(car_data[Price ($)]),SAMEPERIODLASTYEAR(Calender[Date]))
+    , FormatString = "0"
+
+------------------------------
+-- Measure: [Sales Differnece]
+------------------------------
+MEASURE car_data[Sales Differnece] = [YTD Total Sales] - [PYTD Total Sales]
+    , FormatString = "\$#,0.0;(\$#,0.0);\$#,0.0"
+
+------------------------------
+-- Measure: [Sales Diff Color]
+------------------------------
+MEASURE car_data[Sales Diff Color] = IF([Sales Differnece]>0,"Green","Red")
+
+------------------------------
+-- Measure: [YOY Sales Growth]
+------------------------------
+MEASURE car_data[YOY Sales Growth] = [Sales Differnece] / [PYTD Total Sales]
+    , FormatString = "0.00%;-0.00%;0.00%"
+
+---------------------
+-- Measure: [MTD KPI]
+---------------------
+MEASURE car_data[MTD KPI] = CONCATENATE("MTD Total Sales : ",FORMAT([MTD Total Sales] / 1000000,"$0.00M"))
+
+---------------------------
+-- Measure: [YTD Avg Price]
+---------------------------
+MEASURE car_data[YTD Avg Price] = TOTALYTD([Avg Price],Calender[Date])
+    , FormatString = "\$#,0.00;(\$#,0.00);\$#,0.00"
+
+-----------------------
+-- Measure: [Avg Price]
+-----------------------
+MEASURE car_data[Avg Price] = SUM(car_data[Price ($)])/COUNT(car_data[Car_id])
+
+----------------------------
+-- Measure: [PYTD Avg Sales]
+----------------------------
+MEASURE car_data[PYTD Avg Sales] = CALCULATE([Avg Price],SAMEPERIODLASTYEAR(Calender[Date]))
+
+----------------------------
+-- Measure: [Avg Price Diff]
+----------------------------
+MEASURE car_data[Avg Price Diff] = [YTD Avg Price] - [PYTD Avg Sales]
+    , FormatString = "\$#,0.0;(\$#,0.0);\$#,0.0"
+
+----------------------------------
+-- Measure: [avg Price Diff color]
+----------------------------------
+MEASURE car_data[avg Price Diff color] = IF([Avg Price Diff] > 0, "Green","Red")
+
+----------------------------------
+-- Measure: [YOY Avg Price Growth]
+----------------------------------
+MEASURE car_data[YOY Avg Price Growth] = [Avg Price Diff] / [PYTD Avg Sales]
+    , FormatString = "0.00%;-0.00%;0.00%"
+
+---------------------------
+-- Measure: [MTD Avg Price]
+---------------------------
+MEASURE car_data[MTD Avg Price] = TOTALMTD([Avg Price],Calender[Date])
+
+-------------------------
+-- Measure: [MTD avg KPI]
+-------------------------
+MEASURE car_data[MTD avg KPI] = CONCATENATE("MTD Avg Price : ",FORMAT([MTD Avg Price]/1000,"$0.00K"))
+
+--------------------------
+-- Measure: [YTD Car Sold]
+--------------------------
+MEASURE car_data[YTD Car Sold] = TOTALYTD(COUNT(car_data[Car_id]),Calender[Date])
+    , FormatString = "0"
+
+--------------------------
+-- Measure: [MTD Car Sold]
+--------------------------
+MEASURE car_data[MTD Car Sold] = TOTALMTD(COUNT(car_data[Car_id]),Calender[Date])
+    , FormatString = "0"
+
+------------------------------
+-- Measure: [MTD Car Sold KPI]
+------------------------------
+MEASURE car_data[MTD Car Sold KPI] = CONCATENATE("MTD Car Sold : ",FORMAT([MTD Car Sold]/1000,"$0.00K"))
+
+---------------------------
+-- Measure: [PYTD Car Sold]
+---------------------------
+MEASURE car_data[PYTD Car Sold] = CALCULATE(COUNT(car_data[Car_id]),SAMEPERIODLASTYEAR(Calender[Date]))
+    , FormatString = "0"
+
+---------------------------
+-- Measure: [Car Sold Diff]
+---------------------------
+MEASURE car_data[Car Sold Diff] = [YTD Car Sold] - [PYTD Car Sold]
+    , FormatString = "\$#,0.###############;(\$#,0.###############);\$#,0.###############"
+
+---------------------------------
+-- Measure: [Car Sold Diff Color]
+---------------------------------
+MEASURE car_data[Car Sold Diff Color] = IF(car_data[Car Sold Diff] > 0 , "Green","Red")
+
+---------------------------------
+-- Measure: [YOY Car Sold Growth]
+---------------------------------
+MEASURE car_data[YOY Car Sold Growth] = car_data[Car Sold Diff] / [PYTD Car Sold]
+    , FormatString = "0.00%;-0.00%;0.00%"
+
+-------------------------
+-- Measure: [Total Sales]
+-------------------------
+MEASURE car_data[Total Sales] = SUM(car_data[Price ($)])
+    , FormatString = "0"
+
+-----------------------
+-- Measure: [Max Point]
+-----------------------
+MEASURE car_data[Max Point] = IF(MAXX(ALLSELECTED(Calender[Week]),[Total Sales]) = [Total Sales],MAXX(ALLSELECTED(Calender[Week]),[Total Sales]),BLANK())
+    , FormatString = "0"
