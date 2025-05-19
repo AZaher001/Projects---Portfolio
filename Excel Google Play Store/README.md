@@ -19,7 +19,13 @@ Analysis of Google Play Store apps including install trends, ratings, categories
 - Top apps: Subway Surfers, Instagram, Google Drive
 - Moderate correlation (0.642) between installs and reviews
 
+## Repository Structure
+- `data/`: Contains the raw Google store data
+- `src/`: Excel dashboard file
+- `docs/`: PDF report of findings
+- `assets/`: Visualizations and screenshots
 
+- 
 ## Technologies Used
 - Excel (Data Analysis, Pivot Tables, Dashboards)
 - Data Visualization
