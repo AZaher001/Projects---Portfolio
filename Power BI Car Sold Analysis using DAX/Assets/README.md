@@ -1,0 +1,1 @@
+# For PNGs (visuals/icons)
